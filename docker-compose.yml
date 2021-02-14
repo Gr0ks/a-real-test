@@ -3,10 +3,22 @@ version: '3.4'
 services:
 
   backend-server:
-    container_name: "a-real-backend"
+    container_name: a-real-backend
     build: 
       context: ./services/backend/
       dockerfile: Dockerfile
     command: ./app
     ports:
       - 8091:8091
+  duelfrontend:
+    build: 
+      context: ./services/frontend
+      dockerfile: Dockerfile
+    volumes:
+      - './services/frontend:/app'
+      - '/app/node_modules'
+    ports:
+      - 3001:3000
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    container_name: a-real-frontend

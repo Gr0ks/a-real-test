@@ -1,7 +1,6 @@
-import { Provider } from 'mobx-react'
-import objectStore from './stores/ObjectsStore'
-import MainPage from './components/MainPage'
-import './App.css';
+import { Provider } from 'mobx-react';
+import objectStore from './stores/ObjectsStore';
+import MainPage from './components/MainPage';
 
 const stores = { objectStore };
 

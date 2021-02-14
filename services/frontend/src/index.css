@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.object {
+  display: grid;
+  grid-template: "num id text";
+  grid-gap: 5px;
+  grid-template-columns: 50px 100px 1fr;
+  
+};
+
+.object-num {
+  grid-area: num;
+};
+
+.object-id {
+  grid-area: id;
+};
+
+.object-text {
+  grid-area: text;
+};
