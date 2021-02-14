@@ -4,7 +4,9 @@ services:
 
   backend-server:
     container_name: "a-real-backend"
-    build: ./services/backend
+    build: 
+      context: ./services/backend/
+      dockerfile: Dockerfile
     command: ./app
     ports:
       - 8091:8091
