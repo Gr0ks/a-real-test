@@ -14,6 +14,7 @@ func NewObjectRepository() *ObjectRepository {
 	for i := 0; i < 150; i++ {
 		objects[i] = models.Object{
 			Id: time.Now().Nanosecond(),
+			Num: i,
 			Text: time.Now().String(),
 		}
 	}

@@ -30,8 +30,10 @@ func (o *ObjectCreator) GetObjects(firstNumber, count int) ([]models.Object, err
 	}
 
 	result := make([]models.Object, count)
+	j := 0
 	for i := firstNumber; i < lastObjectNumber; i++ {
-		result[i] = objects[i]
+		result[j] = objects[i]
+		j++
 	}
 
 	return result, nil
