@@ -1,7 +1,6 @@
 package models
 
 type Object struct {
-	Id string `json:"id"`
-	Num int `json:"num"`
+	Id int `json:"id"`
 	Text string `json:"text"`
 }
