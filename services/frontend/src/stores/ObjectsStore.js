@@ -10,7 +10,11 @@ class ObjectsStore {
             objects: observable,
             __setObjects: action,
         });
-        this.getObjects(50)
+        this.getObjects(50);
+        this.__createLoadEvent();
+    }
+
+    __createLoadEvent() {
         window.addEventListener(
             'scroll', 
             throttle(() => {
@@ -19,7 +23,7 @@ class ObjectsStore {
                     window.objectStore.getObjects(20);
                 }
             }, 1000),
-        )
+        );
     }
 
     __setObjects(objectsArray) {
