@@ -5,5 +5,5 @@ import (
 )
 
 type UseCase interface {
-	GetObjects(firstNumber, count int) (*[]models.Object, error)
+	GetObjects(firstNumber, count int) ([]models.Object, error)
 }
