@@ -1,7 +1,6 @@
 import DataObjects from './DataObject'
 
-
-const MainPage = () => {
+export default function MainPage() {
     return (
         <div>
             <h2>Home</h2>
@@ -9,5 +8,3 @@ const MainPage = () => {
         </div>
     )
 };
-
-export default MainPage;

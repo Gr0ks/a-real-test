@@ -1,7 +1,7 @@
 import { observer, inject } from 'mobx-react';
 
+const DataObject = inject('objectStore')(observer(({ objectStore }) => {
 
-const DataObject = inject('objectStore')(observer(({objectStore}) => {
     const objectList = objectStore.objects.map(obj => (
         <div className="object" key={obj.num}>
             <div className="object-num">{obj.num}</div>
@@ -9,9 +9,10 @@ const DataObject = inject('objectStore')(observer(({objectStore}) => {
             <div className="object-text">{obj.text}</div>
         </div>
     ))
+
     return (
         <div className='object-list'>
-            { objectList }
+            { objectList}
         </div>
     )
 }));
