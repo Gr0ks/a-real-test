@@ -5,5 +5,5 @@ import (
 )
 
 type Repository interface {
-	GetAllObjects() (*[]models.Object, error)
+	GetAllObjects() ([]models.Object, error)
 }

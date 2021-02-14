@@ -10,18 +10,18 @@ type ObjectRepository struct {
 }
 
 func NewObjectRepository() *ObjectRepository {
-	var objects []models.Object
+	objects := make([]models.Object, 150)
 	for i := 0; i < 150; i++ {
-		objects = append(objects, models.Object{
+		objects[i] = models.Object{
 			Id: time.Now().Nanosecond(),
 			Text: time.Now().String(),
-		})
+		}
 	}
 	return &ObjectRepository{
 		objects: objects,
 	}
 }
 
-func (r *ObjectRepository) GetObjects(firstNumber, count int) (*[]models.Object, error) {
-	return &r.objects, nil
+func (r *ObjectRepository) GetAllObjects() ([]models.Object, error) {
+	return r.objects, nil
 }
