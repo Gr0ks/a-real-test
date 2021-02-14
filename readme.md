@@ -2,8 +2,8 @@
 
 ## Запуск дев окружения
 - в корне репозитория запустить команду 
-    *docker-compose up -d --build*
+> ***docker-compose up -d --build***
 
 ## Запуск прод окружения
 - в корне репозитория запустить команду 
-    *docker-compose -f docker-compose.prod.yml up -d --build*
+> ***docker-compose -f docker-compose.prod.yml up -d --build***
